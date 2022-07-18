@@ -26,8 +26,9 @@ ai_random_text_counter = 0
 particle_timer = 0
 ai_particle_timer = 0
 solve_mode = False
+solve_counter = 0
 
-board = Board(screen, 8, 8)
+board = Board(screen, 16, 16)
 
 while True:
 
@@ -123,8 +124,8 @@ while True:
 
     # AI solved has been clicked
     if solve_mode:
-        last_number = str(pygame.time.get_ticks())
-        if last_number[-1] == "0" and last_number[-2] == "0":
+        solve_counter += 1
+        if solve_counter >= 70:
             ai_move = board.ai_move()
             if ai_move is None:
                 board.inference()
@@ -156,6 +157,7 @@ while True:
                     board.mark_mine(ai_move[0])
                 else:
                     board.explore(ai_move[0])
+            solve_counter = 0
 
     # AI safe moved text
     if ai_safe_text_counter > 0:
