@@ -1,4 +1,3 @@
 # Minesweeper AI
 
-https://github.com/user-attachments/assets/27da9a6f-9c31-4140-8d2e-1f2266333b4a
-
+https://github.com/user-attachments/assets/ae09a705-e142-41a2-bab3-8c51ec65c3ec
